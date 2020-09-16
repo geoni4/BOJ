@@ -142,6 +142,9 @@
     <ClCompile Include="1000.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="1001.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="1002.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
@@ -149,7 +152,28 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="1005.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="1008.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="10171.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="10172.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="10430.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="10718.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="10869.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="10998.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="11444.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -175,7 +199,13 @@
     <ClCompile Include="2502.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="2557.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="2573.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="2588.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="2667.cpp">
@@ -183,9 +213,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="1001.txt" />
     <Text Include="1002.txt" />
     <Text Include="1003.txt" />
     <Text Include="1005.txt" />
+    <Text Include="1008.txt" />
+    <Text Include="10430.txt" />
+    <Text Include="10869.txt" />
+    <Text Include="10998.txt" />
     <Text Include="11444.txt" />
     <Text Include="14501.txt" />
     <Text Include="14888.txt" />
@@ -194,6 +229,7 @@
     <Text Include="17069.txt" />
     <Text Include="17070.txt" />
     <Text Include="2573.txt" />
+    <Text Include="2588.txt" />
     <Text Include="2667.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
