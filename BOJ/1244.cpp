@@ -9,6 +9,7 @@ void sw_change(int arr[], int i) {
 	arr[i] = (arr[i] + 1) % 2;
 }
 
+
 int main() {
 	int T, sw[100], N, S, sw_num, start;
 	freopen("1244.txt", "r", stdin);
