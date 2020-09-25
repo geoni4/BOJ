@@ -18,7 +18,7 @@ int main() {
 		for(int i =0; i<6;i++)
 			a_num[i] = 0, b_num[i] = 0;
 
-		cin>>a;
+		cin >> a;
 		for (int i = 0; i < a; i++) {
 			cin >> tmp;
 			a_num[tmp]++;
