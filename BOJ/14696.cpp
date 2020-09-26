@@ -3,9 +3,6 @@
 #include <iostream>
 
 using namespace std;
-#define A 'A'
-#define B 'B'
-#define D 'D'
 
 int main() {
 	int N, a_num[6] = { 0, }, b_num[6] = { 0, };
@@ -30,14 +27,14 @@ int main() {
 		}
 		for (int i = 4; i > 0; --i) {
 			if (a_num[i] > b_num[i]) {
-				ans = A;
+				ans = 'A';
 				break;
 			}
 			else if (a_num[i] < b_num[i]) {
-				ans = B;
+				ans = 'B';
 				break;
 			}
-			else ans = D;
+			else ans = 'D';
 		}
 		cout<< ans << '\n';
 	}
