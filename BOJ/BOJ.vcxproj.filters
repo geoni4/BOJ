@@ -372,6 +372,15 @@
     <ClCompile Include="1890.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="10870.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="2447.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="11729.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="1001.txt">
@@ -693,6 +702,15 @@
       <Filter>리소스 파일</Filter>
     </Text>
     <Text Include="1890.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="10870.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="2447.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="11729.txt">
       <Filter>리소스 파일</Filter>
     </Text>
   </ItemGroup>
