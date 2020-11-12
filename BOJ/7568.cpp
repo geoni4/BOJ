@@ -21,12 +21,12 @@ int main() {
 		cin >> H[n].weight >> H[n].height;
 		H[n].rank = 1;
 	}
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < N; i++)
 		for (int j = 0; j < N; j++) {
 			if (i == j) continue;
 			if (H[i].weight < H[j].weight && H[i].height < H[j].height) H[i].rank++;
 		}
-	}
+	
 
 	for (int n = 0; n < N; n++)
 		cout << H[n].rank << " ";
