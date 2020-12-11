@@ -3,7 +3,7 @@
 
 int num_arr[10];
 int visited[10];
-void permu(int n, int k, int r, int m) {
+void combi(int n, int k, int r, int m) {
 	if (k == r) {
 		for (int i = 0; i < r; i++) {
 			printf("%d ", num_arr[i]);
@@ -15,7 +15,7 @@ void permu(int n, int k, int r, int m) {
 		num_arr[k] = i;
 		if (visited[i]) continue;
 		visited[i] = 1;
-		permu(n, k+1, r, i);
+		combi(n, k+1, r, i);
 		visited[i] = 0;
 	}
 }
@@ -25,7 +25,7 @@ int main() {
 	int n, k, r;
 	scanf("%d %d", &n, &r);
 
-	permu(n, 0, r,0);
+	combi(n, 0, r,0);
 
 	return 0;
 }
