@@ -1,4 +1,4 @@
-#include <cstdio>
+#include <iostream>
 
 using namespace std;
 
@@ -13,8 +13,6 @@ bool validCheck(int x, int y) {
 	if (x <0 || x>= n || y>= n) return false;
 	return true;
 }
-
-
 
 void nQ(int line) {
 	if (line == n) {
@@ -44,8 +42,8 @@ void nQ(int line) {
 
 int main() {
 	
-	scanf("%d", &n);
+	cin >> n;
 	nQ(0);
-	printf("%d", cnt);
+	cout << cnt;
 	return 0;
 }
