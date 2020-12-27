@@ -3,10 +3,7 @@
 #define MIN(A, B) (A) <= (B) ? (A) : (B)
 using namespace std;
 
-
-
 int map[1000][3];
-int ans;
 int n;
 
 int main() {
