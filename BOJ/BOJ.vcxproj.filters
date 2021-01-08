@@ -555,6 +555,12 @@
     <ClCompile Include="2004.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="10828.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="10773.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="1001.txt">
