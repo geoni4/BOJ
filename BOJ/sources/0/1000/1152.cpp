@@ -1,17 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include <iostream>
-
-using namespace std;
+#include <stdio.h>
 
 int main() {
-	cin.tie(NULL), ios::sync_with_stdio(false);
-	int cnt =0;
+	int cnt =0, length = 0;
 	char str[1000000];
-	freopen("1152.txt", "r", stdin);
-	while (cin >> str) {
-		cnt++;
+	freopen("./resources/0/1000/1152.txt", "r", stdin);
+	scanf("%[^\n]s", str);
+	for (int i = 0; str[i]; i++)	length++;
+
+	for (int i = 0; i < length; i++) {
+		if (i == 0) {
+			if( str[i] != ' ')		cnt++;
+		}
+		else {
+			if (str[i - 1] == ' ' && str[i] != ' ')	cnt++;
+		}
 	}
-	cout << cnt;
+	printf("%d\n", cnt);
 	return 0;
 }
