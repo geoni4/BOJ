@@ -147,12 +147,17 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="resources\0\2000\2444.txt" />
+    <Text Include="resources\0\2000\2566.txt" />
+    <Text Include="resources\0\2000\2738.txt" />
     <Text Include="resources\0\3000\3003.txt" />
     <Text Include="resources\0\9000\9086.txt" />
     <Text Include="resources\1\0000\10988.txt" />
     <Text Include="resources\1\1000\11718.txt" />
     <Text Include="resources\2\5000\25083.txt" />
     <Text Include="resources\2\5000\25206.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
