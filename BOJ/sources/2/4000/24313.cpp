@@ -9,10 +9,13 @@ int main() {
     cin.tie(NULL), ios::sync_with_stdio(false);
     int a1, a0, c, n0;
     cin >> a1 >> a0 >> c >> n0;
-    bool answer = 0;
-    double dividend = a0 - n0;
-    double divisor =  c - a1;
-    if (dividend / divisor <= 0) answer = 1;
+    bool answer = 1;
+    for (int n = n0; n <= 100; n++) {
+        if (a0 > (c - a1) * n) {
+            answer = 0;
+            break;
+        }
+    }
     cout << answer;
     return 0;
 }
