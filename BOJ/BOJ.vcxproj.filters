@@ -26,7 +26,4 @@
   <ItemGroup>
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="sources\1\4000\14215.cpp" />
-  </ItemGroup>
 </Project>
