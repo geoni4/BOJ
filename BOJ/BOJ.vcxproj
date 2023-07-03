@@ -159,9 +159,6 @@
   <ItemGroup>
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="sources\0\2000\9506.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
