@@ -1,27 +1,34 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
-#include <map>
+#include <unordered_map>
+#include <vector>
+#include <string>
 using namespace std;
 
 int main() {
     freopen("./resources/0/1000/1620.txt", "r", stdin);
     cin.tie(NULL), ios::sync_with_stdio(false);
-    int N, M;
+    int N, M, num;
     string str;
-    map<int, string> dex;
+    vector<string> dex_v;
+    unordered_map<string,int> dex_m;
     cin >> N >> M;
     for (int i = 1; i <= N; i++) {
         cin >> str;
-        dex.insert({ i, str });
+        dex_v.push_back(str);
+        dex_m.insert({ str, i });
     }
-
-    for(int i )
-    map<int, string>::iterator iter = dex.find();
-    
-
-
-
+    for (int i = 0; i < M; i++) {
+        str = "";
+        cin >> str;
+        if (isdigit(str[0])) {
+            cout << dex_v[stoi(str) - 1] << '\n';
+        }
+        else {
+            cout << dex_m[str] << '\n';
+        }
+    }
     return 0;
 }
 
