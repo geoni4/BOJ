@@ -44,4 +44,7 @@
   <ItemGroup>
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sources\testetsetsetse.c" />
+  </ItemGroup>
 </Project>
