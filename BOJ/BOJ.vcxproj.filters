@@ -39,6 +39,7 @@
     <Text Include="resources\1\0000\10816.txt" />
     <Text Include="resources\0\1000\1269.txt" />
     <Text Include="resources\1\1000\11478.txt" />
+    <Text Include="resources\1\3000\13241.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\1\0000\10798.txt" />
