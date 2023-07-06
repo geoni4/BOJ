@@ -141,15 +141,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="resources\0\1000\1269.txt" />
-    <Text Include="resources\0\2000\2444.txt" />
-    <Text Include="resources\0\2000\2501.txt" />
-    <Text Include="resources\0\2000\2566.txt" />
-    <Text Include="resources\0\2000\2587.txt" />
-    <Text Include="resources\0\2000\2720.txt" />
-    <Text Include="resources\0\2000\2738.txt" />
-    <Text Include="resources\0\2000\2745.txt" />
-    <Text Include="resources\0\2000\2903.txt" />
+    <Text Include="resources\0\1000\1735.txt" />
     <Text Include="resources\0\3000\3003.txt" />
+    <Text Include="resources\0\4000\4134.txt" />
     <Text Include="resources\0\5000\5073.txt" />
     <Text Include="resources\0\7000\7785.txt" />
     <Text Include="resources\0\9000\9063.txt" />
@@ -163,9 +157,11 @@
     <Text Include="resources\1\1000\11478.txt" />
     <Text Include="resources\1\1000\11718.txt" />
     <Text Include="resources\1\3000\13241.txt" />
+    <Text Include="resources\1\3000\13909.txt" />
     <Text Include="resources\1\4000\14215.txt" />
     <Text Include="resources\1\4000\14425.txt" />
     <Text Include="resources\1\5000\15894.txt" />
+    <Text Include="resources\1\7000\17103.txt" />
     <Text Include="resources\1\8000\18870.txt" />
     <Text Include="resources\1\9000\19532.txt" />
     <Text Include="resources\2\4000\24262.txt" />
@@ -184,7 +180,7 @@
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\testetsetsetse.c" />
+    <ClCompile Include="sources\1\7000\17103.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

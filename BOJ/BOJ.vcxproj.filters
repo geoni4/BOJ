@@ -3,18 +3,11 @@
   <ItemGroup>
     <Text Include="resources\0\9000\9086.txt" />
     <Text Include="resources\1\1000\11718.txt" />
-    <Text Include="resources\0\2000\2444.txt" />
     <Text Include="resources\2\5000\25083.txt" />
     <Text Include="resources\0\3000\3003.txt" />
     <Text Include="resources\1\0000\10988.txt" />
     <Text Include="resources\2\5000\25206.txt" />
-    <Text Include="resources\0\2000\2738.txt" />
-    <Text Include="resources\0\2000\2566.txt" />
-    <Text Include="resources\0\2000\2745.txt" />
     <Text Include="resources\1\1000\11005.txt" />
-    <Text Include="resources\0\2000\2720.txt" />
-    <Text Include="resources\0\2000\2903.txt" />
-    <Text Include="resources\0\2000\2501.txt" />
     <Text Include="resources\0\9000\9506.txt" />
     <Text Include="resources\2\7000\27323.txt" />
     <Text Include="resources\1\5000\15894.txt" />
@@ -30,7 +23,6 @@
     <Text Include="resources\2\4000\24267.txt" />
     <Text Include="resources\2\4000\24313.txt" />
     <Text Include="resources\1\9000\19532.txt" />
-    <Text Include="resources\0\2000\2587.txt" />
     <Text Include="resources\2\5000\25305.txt" />
     <Text Include="resources\1\8000\18870.txt" />
     <Text Include="resources\1\0000\10815.txt" />
@@ -40,11 +32,15 @@
     <Text Include="resources\0\1000\1269.txt" />
     <Text Include="resources\1\1000\11478.txt" />
     <Text Include="resources\1\3000\13241.txt" />
+    <Text Include="resources\0\1000\1735.txt" />
+    <Text Include="resources\0\4000\4134.txt" />
+    <Text Include="resources\1\3000\13909.txt" />
+    <Text Include="resources\1\7000\17103.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\testetsetsetse.c" />
+    <ClCompile Include="sources\1\7000\17103.cpp" />
   </ItemGroup>
 </Project>

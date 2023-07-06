@@ -13,7 +13,7 @@ int main() {
 	
 	int* pa = a;
 	int(*ppa)[2] = a+1;
-	int(*pppa)[2][3] = a;
+	int(*pppa)[2][3] = (*(*a+1)+1)+1;
 
 	printf("pa: %d, (pa+1): %d, (pa+2): %d, (pa+3): %d\n", pa, (pa + 1), (pa + 2), (pa + 3));
 	printf("*pa: %d, *(pa+1): %d, *(pa+2): %d, *(pa+3): %d\n", *pa, *(pa + 1), *(pa + 2), *(pa + 3));
