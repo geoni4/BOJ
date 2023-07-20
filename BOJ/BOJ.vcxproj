@@ -142,6 +142,7 @@
   <ItemGroup>
     <Text Include="resources\0\1000\1269.txt" />
     <Text Include="resources\0\1000\1735.txt" />
+    <Text Include="resources\0\2000\2108.txt" />
     <Text Include="resources\0\3000\3003.txt" />
     <Text Include="resources\0\4000\4134.txt" />
     <Text Include="resources\0\5000\5073.txt" />
@@ -184,7 +185,7 @@
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\2\0000\20920.cpp" />
+    <ClCompile Include="sources\0\2000\2108.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

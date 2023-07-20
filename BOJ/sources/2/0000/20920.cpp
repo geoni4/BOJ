@@ -10,8 +10,9 @@ int main() {
     cin.tie(nullptr), cout.tie(nullptr);
     ios::sync_with_stdio(false);
     
+    int a[5] = { 1, 2, 3 };
 
-
+    cout << a[3];
 
     return 0;
 

@@ -5,7 +5,7 @@
 int main() {
 	//int a = 10;
 	//int* b = &a;
-	int a[4][2][3] = { {{1, 2, 3},	{4, 5, 6}},
+	/*int a[4][2][3] = { {{1, 2, 3},	{4, 5, 6}},
 						{{7, 8, 9},	{10, 11, 12}},
 						{{13, 14, 15}, {16, 17, 18}},
 						{{19, 20, 21}, {22, 23, 24}}
@@ -20,6 +20,10 @@ int main() {
 	printf("*ppa: %d, *(ppa+1): %d, *(ppa+2): %d, *(ppa+3): %d\n", *ppa, *(ppa + 1), *(ppa + 2), *(ppa + 3));
 	printf("**ppa: %d, **(ppa+1): %d, **(ppa+2): %d, **(ppa+3): %d\n", **ppa, **(ppa + 1), **(ppa + 2), **(ppa + 3));
 	printf("**pppa: %d, **(pppa+1): %d, **(pppa+2): %d, **(pppa+3): %d\n", **pppa, **(pppa + 1), **(pppa + 2), **(pppa + 3));
-	printf("***pppa: %d, ***(pppa+1): %d, ***(pppa+2): %d, ***(pppa+3): %d\n", ***pppa, ***(pppa + 1), ***(pppa + 2), ***(pppa + 3));
+	printf("***pppa: %d, ***(pppa+1): %d, ***(pppa+2): %d, ***(pppa+3): %d\n", ***pppa, ***(pppa + 1), ***(pppa + 2), ***(pppa + 3));*/
+
+	int a[5] = { 1, 2, 3, 4 };
+	printf("%d", a[4]);
+
 	return 0;
 }
