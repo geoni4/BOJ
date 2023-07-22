@@ -1,12 +1,3 @@
-7 4
-apple
-ant
-sand
-apple
-append
-sand
-sand
-
 12 5
 appearance
 append
@@ -21,10 +12,15 @@ mouse
 ice
 age
 
-
+7 4
+apple
+ant
 sand
 apple
 append
+sand
+sand
+
 
 swift
 mouse
@@ -32,3 +28,7 @@ appearance
 attendance
 append
 wallet
+
+sand
+apple
+append

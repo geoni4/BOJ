@@ -2,17 +2,43 @@
 
 #include <iostream>
 #include <vector>
-#include <set>
+#include <map>
+#include <algorithm>
+
 using namespace std;
+
+bool cmp(pair<string, int> a, pair<string, int> b) {
+    if (a.second == b.second) {
+        if (a.first.length() == b.first.length()) {
+            return a.first < b.first;
+        }
+        return a.first.length() > b.first.length();
+    }
+    return a.second > b.second;
+}
 
 int main() {
     freopen("./resources/2/0000/20920.txt", "r", stdin);
     cin.tie(nullptr), cout.tie(nullptr);
     ios::sync_with_stdio(false);
-    
-    int a[5] = { 1, 2, 3 };
+    map<string, int> words;
+    vector<pair<string, int>> v_words;
+    int N, length;
+    cin >> N >> length;
+    for (int n = 0; n < N; n++) {
+        string tmp_str;
+        cin >> tmp_str;
+        if (tmp_str.length() < length) continue;
+        words[tmp_str]++;
 
-    cout << a[3];
+    }
+
+    v_words = vector<pair<string, int>>(words.begin(), words.end());
+    sort(v_words.begin(), v_words.end(), cmp);
+
+    for (int i = 0; i < v_words.size(); i++) {
+        cout << v_words[i].first << '\n';
+    }
 
     return 0;
 
