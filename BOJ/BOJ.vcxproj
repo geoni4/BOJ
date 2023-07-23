@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="resources\0\1000\1021.txt" />
     <Text Include="resources\0\1000\1269.txt" />
     <Text Include="resources\0\1000\1735.txt" />
     <Text Include="resources\0\1000\1966.txt" />
@@ -190,7 +191,7 @@
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\1\0000\10866.cpp" />
+    <ClCompile Include="sources\0\1000\1021.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
