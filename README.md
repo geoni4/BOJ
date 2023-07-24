@@ -19,7 +19,7 @@
 
 ---
 
-# Baekjoon Online judge(BOJ) 問題解く
+# Baekjoon Online judge(BOJ) 問題解いた方法
 
 1. C言語とC++で解いています。
 
