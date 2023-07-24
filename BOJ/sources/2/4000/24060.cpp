@@ -3,32 +3,36 @@
 #include <iostream>
 
 using namespace std;
-
+int K, cnt=0, result;
+int* tmp;
 void merge(int A[], int p, int q, int r) {
     int i = p;
     int j = q + 1;
     int t = 1;
-    int* tmp = new int[sizeof(A)];
     while (i <= q && j <= r) {
-        if (A[i] <= A[j]) {
-            tmp[t++] = A[i++];
-        }
-        else tmp[t++] = A[j++];
+        if (A[i] <= A[j])   tmp[t++] = A[i++];
+        else                tmp[t++] = A[j++];
     }
     while (i <= q)
         tmp[t++] = A[i++];
     while (j <= r)
         tmp[t++] = A[j++];
+
     i = p; t = 1;
-    while (i <= r)
+    while (i <= r) {
         A[i++] = tmp[t++];
+        cnt++;
+        if (cnt == K) {
+            result = A[i - 1];
+            return;
+        }
+    }
 }
 
 
 void merge_sort(int A[], int p, int r) {
-    int q;
     if (p < r) {
-        q = (p + r) / 2;
+        int q = (p + r) / 2;
         merge_sort(A, p, q);
         merge_sort(A, q + 1, r);
         merge(A, p, q, r);
@@ -40,13 +44,16 @@ int main() {
 	freopen("./resources/2/4000/24060.txt", "r", stdin);
 	cin.tie(nullptr), cout.tie(nullptr);
 	ios::sync_with_stdio(false);
-    int N, K;
+    int N;
     cin >> N >> K;
-    int* numArr = new int[N];
+    int* numArr = new int[N+1];
+    tmp = new int[N + 1];
     for (int i = 0; i < N; i++) {
-
+        cin >> numArr[i];
     }
-
+    merge_sort(numArr, 0, N - 1);
+    if (cnt < K) result = -1;
+    cout << result;
 	return 0;
 }
 
