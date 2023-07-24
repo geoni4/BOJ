@@ -4,11 +4,48 @@
 
 using namespace std;
 
+void merge(int A[], int p, int q, int r) {
+    int i = p;
+    int j = q + 1;
+    int t = 1;
+    int *tmp = new int[sizeof(A)];
+    while (i <= q and j <= r) {
+        if (A[i] <= A[j]) {
+            tmp[t++] = A[i++];
+        }
+        else tmp[t++] = A[j++];
+    }
+    while (i <= q)
+        tmp[t++] = A[i++];
+    while (j <= r)
+        tmp[t++] = A[j++];
+    i = p; t = 1;
+    while (i <= r)
+        A[i++] = tmp[t++];
+}
+
+
+void merge_sort(int A[], int p, int r) {
+    int q;
+    if (p < r) {
+        q = (p + r) / 2;
+        merge_sort(A, p, q);
+        merge_sort(A, q + 1, r);
+        merge(A, p, q, r);
+    }
+}
+
+
 int main() {
 	freopen("./resources/2/4000/24060.txt", "r", stdin);
 	cin.tie(nullptr), cout.tie(nullptr);
 	ios::sync_with_stdio(false);
+    int N, K;
+    cin >> N >> K;
+    int* numArr = new int[N];
+    for (int i = 0; i < N; i++) {
 
+    }
 
 	return 0;
 }
