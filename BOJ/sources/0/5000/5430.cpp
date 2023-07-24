@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <queue>
+#include <sstream>
 
 using namespace std;
 
@@ -12,13 +13,58 @@ int main() {
     int test_case;
     cin >> test_case;
     for (int t = 0; t < test_case; t++) {
+        int size, tmp_num;
         deque<int> num_q;
-        string cmd;
-        cin >> cmd;
-        string tmp_q;
-
+        string cmd, tmp_q;
+        cin >> cmd >> size >> tmp_q;
+        int tmp_size = tmp_q.size();
+        for (int i = 0; i < tmp_size; i++) {
+            if (tmp_q[i] == ',') tmp_q[i] = ' ';
+            if (tmp_q[i] == '[') tmp_q[i] = ' ';
+            if (tmp_q[i] == ']') tmp_q[i] = ' ';
+        }
+        stringstream stream;
+        stream.str(tmp_q);
+        bool isReverse = false;
+        while (stream >> tmp_num) {
+            num_q.push_back(tmp_num);
+        }
+        for (int i = 0; i < cmd.size(); i++) {
+            if (cmd[i] == 'R') {
+                isReverse = !isReverse;
+            }
+            else if (cmd[i] == 'D') {
+                if (size == 0) {
+                    cout << "error\n";
+                    size--;
+                    break;
+                }
+                if (!isReverse) {
+                    num_q.pop_front();
+                    size--;
+                }
+                else {
+                    num_q.pop_back();
+                    size--;
+                }
+            }
+        }
+        if (size < 0) continue;
+        cout << '[';
+        if(!isReverse){
+            for (int i = 0; i < size; i++) {
+                cout << num_q[i];
+                if (i < size - 1)cout << ',';
+            }
+        }
+        else {
+            for (int i = size-1; i >= 0; i--) {
+                cout << num_q[i];
+                if (i > 0) cout << ',';
+            }
+        }
+        cout << "]\n";
     }
-
     return 0;
 }
 

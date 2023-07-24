@@ -141,6 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="resources\0\1000\1021.txt" />
     <Text Include="resources\0\1000\1269.txt" />
     <Text Include="resources\0\1000\1735.txt" />
     <Text Include="resources\0\1000\1966.txt" />
@@ -149,6 +150,7 @@
     <Text Include="resources\0\3000\3003.txt" />
     <Text Include="resources\0\4000\4134.txt" />
     <Text Include="resources\0\5000\5073.txt" />
+    <Text Include="resources\0\5000\5430.txt" />
     <Text Include="resources\0\7000\7785.txt" />
     <Text Include="resources\0\9000\9063.txt" />
     <Text Include="resources\0\9000\9086.txt" />
@@ -172,6 +174,7 @@
     <Text Include="resources\1\8000\18870.txt" />
     <Text Include="resources\1\9000\19532.txt" />
     <Text Include="resources\2\0000\20920.txt" />
+    <Text Include="resources\2\4000\24060.txt" />
     <Text Include="resources\2\4000\24262.txt" />
     <Text Include="resources\2\4000\24263.txt" />
     <Text Include="resources\2\4000\24264.txt" />
@@ -184,8 +187,10 @@
     <Text Include="resources\2\5000\25192.txt" />
     <Text Include="resources\2\5000\25206.txt" />
     <Text Include="resources\2\5000\25305.txt" />
+    <Text Include="resources\2\5000\25501.txt" />
     <Text Include="resources\2\6000\26069.txt" />
     <Text Include="resources\2\7000\27323.txt" />
+    <Text Include="resources\2\7000\27433.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\1\0000\10798.txt" />
