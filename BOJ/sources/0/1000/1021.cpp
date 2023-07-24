@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -8,6 +9,40 @@ int main() {
     freopen("./resources/0/1000/1021.txt", "r", stdin);
     cin.tie(nullptr), cout.tie(nullptr);
     ios::sync_with_stdio(false);
+    deque<int> deq1, deq2;
+    int N, M;
+    int min=0;
+    cin >> N >> M;
+    for (int i = 1; i <= N; i++) {
+        deq1.push_back(i); deq2.push_back(i);
+    }
+    for(int i =0; i<M;i++){
+        int pop;
+        int left = 0; int right = 0;
+        cin >> pop;
+        while (1) {
+            if (deq1.front() == pop) {
+                deq1.pop_front();
+                break;
+            }
+            else {
+                deq1.push_back(deq1.front()); deq1.pop_front();
+                left++;
+            }
+        }
+        while (1) {
+            if (deq2.front() == pop) {
+                deq2.pop_front();
+                break;
+            }
+            else {
+                deq2.push_front(deq2.back()); deq2.pop_back();
+                right++;
+            }
+        }
+        min += left < right ? left : right;
+    }
+    cout << min;
 	return 0;
 }
 
