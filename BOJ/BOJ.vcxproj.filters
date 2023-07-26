@@ -55,11 +55,13 @@
     <Text Include="resources\0\2000\2580.txt" />
     <Text Include="resources\2\4000\24416.txt" />
     <Text Include="resources\0\1000\1015.txt" />
+    <Text Include="resources\0\1000\1009.txt" />
+    <Text Include="resources\0\1000\1012.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="resources\1\0000\10798.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sources\0\1000\1015.cpp" />
+    <ClCompile Include="sources\0\1000\1012.cpp" />
   </ItemGroup>
 </Project>
