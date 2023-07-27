@@ -12,7 +12,7 @@ int main() {
     string cmd;
     cin >> test_case;
     for (int t = 0; t < test_case; t++) {
-
+        
     }
 	return 0;
 }

@@ -1,35 +1,77 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
 int map[9][9];
 
-int chk[9];
 int n, cnt;
 typedef struct _COORD {
-	int x, y;
+	int x, y, value;
 }COORD;
 
 // 해당 자리에 뭐가 들어갈 수 있는지 확인
 // 이후 가로, 세로, 네모 확인
-void right() {
-	
-		COORD point = { -1, -1 };
-		for (int j = 0; j < 9; j++) {
-			int tmp=0;
-			//= map[i][j];
-			if (!tmp) {
-				if (point.x != -1 && point.y != -1) break;
-				//point.x = j, point.y = i;
-			}
-			else {
-				chk[tmp - 1] = 1;
-			}
+vector<COORD> rowCheck(int row, int col) {
+	vector<COORD> v_coord;
+	int chk[10] = { 0, };
+	chk[0] = 1;
+	for (int i = 1; i <= 9; i++) {
+		chk[map[row][i - 1]] = 1;
+	}
+	for (int i = 1; i <= 9; i++) {
+		if (!chk[i]) {
+			COORD tmp;
+			tmp.y = row;
+			tmp.x = col;
+			tmp.value = i;
+			v_coord.push_back(tmp);
 		}
-		if (point.x == -1 && point.y == -1);
+	}
+	return v_coord;
+}
 
+vector<COORD> colCheck(int row, int col) {
+	vector<COORD> v_coord;
+	int chk[10] = { 0, };
+	chk[0] = 1;
+	for (int i = 1; i <= 9; i++) {
+		chk[map[i-1][col]] = 1;
+	}
+	for (int i = 1; i <= 9; i++) {
+		if (chk[i]) {
+			COORD tmp;
+			tmp.y = row;
+			tmp.x = col;
+			tmp.value = i;
+			v_coord.push_back(tmp);
+		}
+	}
+	return v_coord;
+}
+
+vector<COORD> rectCheck(int row, int col) {
+	vector<COORD> v_coord;
+	int tmp_row = row - row % 3;
+	int tmp_col = col - col % 3;
+	int chk[10] = { 0, };
+	chk[0] = 1;
+	for (int i = tmp_row; i < tmp_row + 3 ; i++) {
+		for (int j = tmp_col; j < tmp_col + 3; j++) {
+			chk[map[i][j]] = 1;
+		}
+	}
+	for (int i = 1; i <= 9; i++) {
+		if (!chk[i]) {
+			COORD tmp;
+			tmp.y = row;
+			tmp.x = col;
+			tmp.value = i;
+			v_coord.push_back(tmp);
+		}
+	}
+	return v_coord;
 }
 
 
@@ -42,13 +84,34 @@ int main() {
 	freopen("./resources/0/2000/2580.txt", "r", stdin);
 	cin.tie(nullptr), cout.tie(nullptr);
 	ios::sync_with_stdio(false);
-	for (int y = 0; y < 9; y++)
+	for (int y = 0; y < 9; y++) {
 		for (int x = 0; x < 9; x++) {
 			int tmp;
 			cin >> tmp;
 			map[y][x] = tmp;
-			if (tmp == 0) cnt++;
 		}
+	}
+	vector<COORD> v_coord;
+	for (int y = 0; y < 9; y++) {
+		for (int x = 0; x < 9; x++) {
+			vector<COORD> v_coord_tmp, v_coord_row, v_coord_col, v_coord_rect;
+			if (map[y][x] == 0) {
+				v_coord_row = rowCheck(y, x);
+				v_coord_col = colCheck(y, x);
+				v_coord_rect = rectCheck(y, x);
+				v_coord_tmp = v_coord_row.size() < v_coord_col.size() ? v_coord_row : v_coord_col;
+				v_coord_tmp = v_coord_tmp.size() < v_coord_rect.size() ? v_coord_tmp : v_coord_rect;
+			}
+			
+			
+			for (int i = 0; i < v_coord_tmp.size(); i++) {
+				v_coord.push_back(v_coord_tmp[i]);
+			}
+		}
+	}
+	for (int i = 0; i < v_coord.size(); i++) {
+		cout << v_coord[i].y << ' ' << v_coord[i].x << ' ' << v_coord[i].value << '\n';
+	}
 	for (int y = 0; y < 9; y++) {
 		for (int x = 0; x < 9; x++)
 			cout << map[y][x] << ' ';
