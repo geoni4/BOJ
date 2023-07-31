@@ -8,7 +8,7 @@ int map[9][9];
 
 int n, cnt;
 typedef struct _COORD {
-	int x, y, value;
+	int x, y, value, size;
 }COORD;
 
 // 해당 자리에 뭐가 들어갈 수 있는지 확인
@@ -17,8 +17,10 @@ vector<COORD> rowCheck(int row, int col) {
 	vector<COORD> v_coord;
 	int chk[10] = { 0, };
 	chk[0] = 1;
+	int size = 9;
 	for (int i = 1; i <= 9; i++) {
 		chk[map[row][i - 1]] = 1;
+		if (map[row][i-1]) size--;
 	}
 	for (int i = 1; i <= 9; i++) {
 		if (!chk[i]) {
@@ -26,6 +28,7 @@ vector<COORD> rowCheck(int row, int col) {
 			tmp.y = row;
 			tmp.x = col;
 			tmp.value = i;
+			tmp.size = size;
 			v_coord.push_back(tmp);
 		}
 	}
@@ -36,8 +39,10 @@ vector<COORD> colCheck(int row, int col) {
 	vector<COORD> v_coord;
 	int chk[10] = { 0, };
 	chk[0] = 1;
+	int size = 0;
 	for (int i = 1; i <= 9; i++) {
 		chk[map[i-1][col]] = 1;
+		if (map[i-1][col]) size--;
 	}
 	for (int i = 1; i <= 9; i++) {
 		if (chk[i]) {
@@ -45,6 +50,7 @@ vector<COORD> colCheck(int row, int col) {
 			tmp.y = row;
 			tmp.x = col;
 			tmp.value = i;
+			tmp.size = size;
 			v_coord.push_back(tmp);
 		}
 	}
@@ -57,9 +63,11 @@ vector<COORD> rectCheck(int row, int col) {
 	int tmp_col = col - col % 3;
 	int chk[10] = { 0, };
 	chk[0] = 1;
+	int size = 9;
 	for (int i = tmp_row; i < tmp_row + 3 ; i++) {
 		for (int j = tmp_col; j < tmp_col + 3; j++) {
 			chk[map[i][j]] = 1;
+			if (map[i][j]) size--;
 		}
 	}
 	for (int i = 1; i <= 9; i++) {
@@ -68,6 +76,7 @@ vector<COORD> rectCheck(int row, int col) {
 			tmp.y = row;
 			tmp.x = col;
 			tmp.value = i;
+			tmp.size = size;
 			v_coord.push_back(tmp);
 		}
 	}
@@ -91,6 +100,7 @@ int main() {
 			map[y][x] = tmp;
 		}
 	}
+
 	vector<COORD> v_coord;
 	for (int y = 0; y < 9; y++) {
 		for (int x = 0; x < 9; x++) {
@@ -103,14 +113,13 @@ int main() {
 				v_coord_tmp = v_coord_tmp.size() < v_coord_rect.size() ? v_coord_tmp : v_coord_rect;
 			}
 			
-			
 			for (int i = 0; i < v_coord_tmp.size(); i++) {
 				v_coord.push_back(v_coord_tmp[i]);
 			}
 		}
 	}
 	for (int i = 0; i < v_coord.size(); i++) {
-		cout << v_coord[i].y << ' ' << v_coord[i].x << ' ' << v_coord[i].value << '\n';
+		cout << v_coord[i].y << ' ' << v_coord[i].x << ' ' << v_coord[i].value << ' ' << v_coord[i].size << '\n';
 	}
 	for (int y = 0; y < 9; y++) {
 		for (int x = 0; x < 9; x++)
