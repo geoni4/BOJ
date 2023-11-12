@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
   cin.tie(nullptr), ios::sync_with_stdio(false);
-  freopen("/resources/1/2000/12789.txt", "r", stdin);
+  freopen("../../../resources/1/2000/12789.txt", "r", stdin);
 
   //deque<int> d_row, d_sub, d_main;
   stack<int> s_sub, s_main;
@@ -25,8 +25,11 @@ int main(){
       cout << "Sad";
       return 0;
     }
-
-    while(s_sub.top() == s_main.top()+1){
+    while(1){
+      if(s_main.top() == 0 || s_sub.top() == row_size+1) break;
+      if(s_sub.top() != s_main.top()+1) break;
+      cout << "main top : " << s_main.top() << '\n';
+      cout << "sub top : " << s_sub.top() << '\n';
       s_main.push(s_sub.top());
       s_sub.pop();
     }
