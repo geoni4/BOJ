@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <deque>
 
 using namespace std;
 
@@ -11,31 +11,39 @@ int main(){
   int N;
 
   cin >> N;
-  vector< pair<int, bool> > v_numList;
+  deque< pair<int, int> > d_numList;
   for(int n = 0 ; n<N ; n++){
-    pair<int, bool> p;
-    cin >> p.first;
-    p.second = true;
-    v_numList.push_back(p);
+    pair<int, int> p;
+    cin >> p.second;
+    p.first = n+1;
+    d_numList.push_back(p);
   }
-
-  // 처음에 첫번째 걸 확인하고 값을 받아놓고 터트린다.
-  int i=0;
-  int value=0;
-  
-  
-
-
-
-  for (int n =0;n<N;n++){
-    cout << v_numList[n].first << ' ' <<  v_numList[n].second << '\n'; 
+  int direction = -1;
+  int value = 1;
+  while(1){
+    if(d_numList.size() == 0) break;
+    if(value > 0){
+      d_numList.push_back(d_numList.front());
+      d_numList.pop_front();
+      value--;
+      direction = -1;
+    } else if(value < 0){
+      d_numList.push_front(d_numList.back());
+      d_numList.pop_back();
+      value++;
+      direction = 1;
+    } else{
+      if(direction == -1){
+        cout << d_numList.back().first << ' ';
+        value = d_numList.back().second;
+        d_numList.pop_back();
+      } else if(direction == 1){
+        cout << d_numList.front().first << ' ';
+        value = d_numList.front().second;
+        d_numList.pop_front();
+      }
+    }
   }
-  
-  
-
-
-
-
   return 0;
 }
 
